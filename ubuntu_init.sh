@@ -11,8 +11,8 @@ snapd
 
 # Install python3 and pip
 sudo apt update
-sudo apt -y install python3
-sudo apt -y install python3-pip
+sudo apt install python3
+sudo apt install python3-pip
 sudo pip3 install --upgrade pip
 pip install virtualenv
 
@@ -36,7 +36,7 @@ sudo apt-get -y install docker-ce docker-ce-cli containerd.io docker-buildx-plug
 sudo snap -y install --classic code
 
 #install cmake
-sudo snap -y install cmake
+sudo snap install cmake
 
 git --version
 cmake --version
