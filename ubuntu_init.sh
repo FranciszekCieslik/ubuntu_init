@@ -11,13 +11,14 @@ snapd
 
 # Install python3 and pip
 sudo apt update
-sudo apt install python3
-sudo apt install python3-pip
+sudo apt -y install python3
+sudo apt -y install python3-pip
 sudo pip3 install --upgrade pip
+pip install virtualenv
 
 # Add Docker's official GPG key:
 sudo apt-get update
-sudo apt-get install ca-certificates curl
+sudo apt-get -y install ca-certificates curl
 sudo install -m 0755 -d /etc/apt/keyrings
 sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
 sudo chmod a+r /etc/apt/keyrings/docker.asc
@@ -33,3 +34,19 @@ sudo apt-get -y install docker-ce docker-ce-cli containerd.io docker-buildx-plug
 
 #install vscode
 sudo snap -y install --classic code
+
+#install cmake
+sudo snap -y install cmake
+
+git --version
+cmake --version
+docker --version
+python3 --version
+pip --version
+
+if code --version &> /dev/null; then
+    echo "VSCode is installed"
+else
+    echo "VSCode is not installed"
+fi
+
